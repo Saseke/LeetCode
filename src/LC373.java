@@ -39,6 +39,7 @@ public class LC373 {
         return list;
     }
 
+
     /**
      * LeetCode spend: 382ms
      *
