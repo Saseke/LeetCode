@@ -48,6 +48,7 @@ public class LC373 {
      * @param k    take the first k num
      * @return a list wrapped collection of array
      */
+
     public static List<int[]> kSmallPairs1(int[] num1, int[] num2, int k) {
         if (num1.length == 0 || num2.length == 0) {
             return Collections.emptyList();
