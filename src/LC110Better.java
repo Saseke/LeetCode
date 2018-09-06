@@ -1,3 +1,5 @@
+import tree.TreeNode;
+
 /**
  * @Author Yoke
  * @Date 7/18/18 10:38 PM
@@ -12,9 +14,13 @@ public class LC110Better {
             return 0;
         }
         int leftHelper = helper(root.left);
-        if (leftHelper == Integer.MIN_VALUE) return Integer.MIN_VALUE;
+        if (leftHelper == Integer.MIN_VALUE) {
+            return Integer.MIN_VALUE;
+        }
         int rightHelper = helper(root.right);
-        if (rightHelper == Integer.MIN_VALUE) return Integer.MIN_VALUE;
+        if (rightHelper == Integer.MIN_VALUE) {
+            return Integer.MIN_VALUE;
+        }
         int diff = Math.abs(leftHelper - rightHelper);
         if (diff > 1) {
             return Integer.MIN_VALUE;

@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 /**
  * @author Yoke
@@ -10,7 +7,22 @@ import java.util.Set;
 public class LC003 {
 
     public static void main(String[] args) {
-        System.out.println(lengthOfLongestSubstring3("pwwkew"));
+        System.out.println(lengthOfLongestSubstring4("bcdasa"));
+    }
+
+
+    public static int lengthOfLongestSubstring4(String s) {
+        Map<Character, Integer> map = new HashMap<>();
+        int res = 0;
+        int j = 0;
+        for (int i = 0; i < s.length(); i++) {
+            if (map.containsKey(s.charAt(i))) {
+                j = Math.max(map.get(s.charAt(i)) + 1, j);
+            }
+            map.put(s.charAt(i), i);
+            res = Math.max(res, i - j + 1);
+        }
+        return res;
     }
 
 

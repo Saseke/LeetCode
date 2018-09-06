@@ -2,8 +2,8 @@
  * @author Yoke
  * @Date 6/30/18 12:11 AM
  */
-public class LCoo2Better {
-    public ListNode addTwoNumbers(ListNode l1,ListNode l2){
+public class LC002Better {
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2){
         ListNode dummyHead = new ListNode(0);
         ListNode p = l1,q= l2,curr = dummyHead;
         int carry = 0;
