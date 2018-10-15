@@ -2,10 +2,10 @@ public class LC641 {
 
 }
 
-class LinkedNode {
+class LinkedNode<I extends Number> {
     int val;
-    LinkedNode pre;
-    LinkedNode next;
+    LinkedNode<Number> pre;
+    LinkedNode<Number> next;
 
     LinkedNode(int val) {
         this.val = val;
@@ -16,8 +16,8 @@ class MyCircularDeque {
 
     int length;
     int size;
-    LinkedNode first;
-    LinkedNode end;
+    LinkedNode<Number> first;
+    LinkedNode<Number> end;
 
     public MyCircularDeque(int k) {
         length = 0;
@@ -25,7 +25,7 @@ class MyCircularDeque {
     }
 
     public boolean insertFront(int value) {
-        LinkedNode node = new LinkedNode(value);
+        LinkedNode<Number> node = new LinkedNode<Number>(value);
         if (length == 0) {
             first = node;
             end = node;
@@ -43,7 +43,7 @@ class MyCircularDeque {
     }
 
     public boolean insertLast(int value) {
-        LinkedNode node = new LinkedNode(value);
+        LinkedNode<Number> node = new LinkedNode<Number>(value);
         if (end == null) {
             first = node;
             end = node;
