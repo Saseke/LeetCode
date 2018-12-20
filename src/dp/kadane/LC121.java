@@ -4,6 +4,17 @@ package dp.kadane;
  * @Author Yoke
  * @Date 2018/11/29 下午9:42
  */
+
+/**
+ * 这个求最大收益
+ * arr = [a0,a1,a2,a3,a4,a5,a6]
+ * areal = [b0,b1,b2,b3,b4,b5,b6]
+ * b3 = a3-a2;
+ * b4 = a4 -a3
+ * b5 = a5 - a4
+ * b6 = a6 - a5
+ * b3+b4+b5+b6 = a6-a2   求最大收益实际就是求ai-aj的最大值,归根结底还是求连续序列的最大子段和
+ */
 public class LC121 {
     public int maxProfit(int[] prices) {
         int curMaxPrice = 0, maxPrice = 0;
